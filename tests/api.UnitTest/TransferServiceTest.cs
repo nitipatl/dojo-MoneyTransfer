@@ -3,7 +3,7 @@ using Xunit;
 
 namespace api.UnitTest
 {
-    public class UnitTest1
+    public class TransferServiceTest
     {
         [Fact]
         public void Test1()
