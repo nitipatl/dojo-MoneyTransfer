@@ -34,10 +34,22 @@ namespace api.UnitTest
         [Theory]
         [InlineData(35.00, true)]
         [InlineData(0.00, false)]
-        public void When_TransferFee_Is_Not_0(double transferFeeAmount, bool expectedResult)
+        public void When_TransferFee_Is_Not_0(double transferFee, bool expectedResult)
         {
             TransferService transferService = new TransferService();
-            bool actualResult = transferService.IsTransferFee(transferFeeAmount);
+            bool actualResult = transferService.IsTransferFee(transferFee);
+
+            Assert.Equal(expectedResult, actualResult);
+        }
+        
+        [Theory]
+        [InlineData(535.00, 99465.00, true)]
+        [InlineData(510.00, 10.00, true)]
+        [InlineData(535.00, 99995.00, false)]
+        public void When_TransferAmount_And_TransferFee_Is_Not_Over_Accumulated_In_Day(double transferAmountAndFee, bool expectedResult)
+        {
+            TransferService transferService = new TransferService();
+            bool actualResult = transferService.IsTotalTransferNotOverAccumulated(transferAmountAndFee);
 
             Assert.Equal(expectedResult, actualResult);
         }
