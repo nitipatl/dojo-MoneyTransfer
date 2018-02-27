@@ -22,5 +22,14 @@ namespace api.Services
 
             return false;
         }
+
+        public bool IsTransferFee(double transferFeeAmount)
+        {
+            if(transferFeeAmount > 0) {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
