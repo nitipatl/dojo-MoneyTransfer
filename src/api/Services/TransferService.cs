@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using api.Models;
 
 namespace api.Services
 {
@@ -68,6 +69,28 @@ namespace api.Services
             }
 
             return false;
+        }
+
+        public TransferOutputModel TransferMoney(TransferInputModel transferDataInput)
+        {
+            HeaderModel header = new HeaderModel {
+                code = "200",
+                message = "success"
+            };
+
+            TransferOutputDataModel body = new TransferOutputDataModel {
+                origin_account_balance = 5000.00,
+                origin_account_id = transferDataInput.origin_account_id,
+                fee_amount = 35.00,
+                transfer_amount = transferDataInput.transfer_amount
+            };
+
+            TransferOutputModel transferOutputModel = new TransferOutputModel {
+                header = header,
+                body = body
+            };
+
+            return transferOutputModel;
         }
     }
 }
