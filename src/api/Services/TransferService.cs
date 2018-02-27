@@ -59,5 +59,15 @@ namespace api.Services
 
             return 35.00;
         }
+
+        public bool IsTotalTransferNotOverAccountBalance(double transferAmountAndFee, double accountBalance)
+        {
+            double avaliableTotal = accountBalance - transferAmountAndFee;
+            if(avaliableTotal >= 0) {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
