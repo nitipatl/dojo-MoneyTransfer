@@ -41,5 +41,14 @@ namespace api.Services
 
             return false;
         }
+
+        public bool IsSameBank(string originBank, string destinationBank)
+        {
+            if(originBank == destinationBank) {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
