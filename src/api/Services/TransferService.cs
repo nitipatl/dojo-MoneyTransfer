@@ -23,9 +23,19 @@ namespace api.Services
             return false;
         }
 
-        public bool IsTransferFee(double transferFeeAmount)
+        public bool IsTransferFee(double transferFee)
         {
-            if(transferFeeAmount > 0) {
+            if(transferFee > 0) {
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool IsTotalTransferNotOverAccumulated(double transferAmountAndFee, double accumulatedNumber)
+        {
+            double transferTotal = transferAmountAndFee + accumulatedNumber;
+            if((transferTotal > 0) && (transferTotal <= 100000)) {
                 return true;
             }
 
