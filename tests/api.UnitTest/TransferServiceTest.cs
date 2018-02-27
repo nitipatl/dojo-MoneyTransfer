@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using api.Services;
 
 namespace api.UnitTest
 {
@@ -10,7 +11,7 @@ namespace api.UnitTest
         {
             bool expectedResult = true;
 
-            TransferService transferService = TransferService();
+            TransferService transferService = new TransferService();
             bool actualResult = transferService.IsAccumulated(0);
 
             Assert.Equal(expectedResult, actualResult);
