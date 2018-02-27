@@ -47,3 +47,7 @@ API โอนเงินจากบัญชีต้นทาง ไปบั
 ![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_unit_same_bank.JPG)
 
 ![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_unit_transfer_amount_not_over_account_balance.jpg)
+
+### Define Integration
+
+![Define Integration](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_define_integration_focus.JPG)
