@@ -46,10 +46,10 @@ namespace api.UnitTest
         [InlineData(535.00, 99465.00, true)]
         [InlineData(510.00, 10.00, true)]
         [InlineData(535.00, 99995.00, false)]
-        public void When_TransferAmount_And_TransferFee_Is_Not_Over_Accumulated_In_Day(double transferAmountAndFee, bool expectedResult)
+        public void When_TransferAmount_And_TransferFee_Is_Not_Over_Accumulated_In_Day(double transferAmountAndFee, double accumulatedNumber, bool expectedResult)
         {
             TransferService transferService = new TransferService();
-            bool actualResult = transferService.IsTotalTransferNotOverAccumulated(transferAmountAndFee);
+            bool actualResult = transferService.IsTotalTransferNotOverAccumulated(transferAmountAndFee, accumulatedNumber);
 
             Assert.Equal(expectedResult, actualResult);
         }
