@@ -5,7 +5,7 @@ namespace api.Services
 {
     public class TransferService
     {
-        public bool IsAccumulated(int accumulatedNumber)
+        public bool IsAccumulated(double accumulatedNumber)
         {
             if(accumulatedNumber == 0) {
                 return true;
