@@ -55,8 +55,8 @@ namespace api.UnitTest
         }
 
         [Theory]
-        [InlineData("BKK001", "BKK001", 0)]
-        [InlineData("BKK001", "NSW001", 10)]
+        [InlineData("BKK001", "BKK001", 0.00)]
+        [InlineData("BKK001", "NSW001", 10.00)]
         public void When_Transfer_Is_Same_Area(string originArea, string destinationArea, double expectedResult)
         {
             TransferService transferService = new TransferService();
@@ -66,12 +66,24 @@ namespace api.UnitTest
         }
 
         [Theory]
-        [InlineData("SCB", "SCB", 0)]
-        [InlineData("SCB", "KBANK", 35)]
+        [InlineData("SCB", "SCB", 0.00)]
+        [InlineData("SCB", "KBANK", 35.00)]
         public void When_Transfer_Is_Same_Bank(string originBank, string destinationBank, double expectedResult)
         {
             TransferService transferService = new TransferService();
             double actualResult = transferService.IsSameBank(originBank, destinationBank);
+
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Theory]
+        [InlineData(535.00, 5000.00, true)]
+        [InlineData(5000.00, 5000.00, true)]
+        [InlineData(5535.00, 5000.00, false)]
+        public void When_TransferAmount_And_TransferFee_Is_Not_Over_Account_Balance(double transferAmountAndFee, double accountBalance, bool expectedResult)
+        {
+            TransferService transferService = new TransferService();
+            bool actualResult = transferService.IsTotalTransferNotOverAccountBalance(transferAmountAndFee, accountBalance);
 
             Assert.Equal(expectedResult, actualResult);
         }
