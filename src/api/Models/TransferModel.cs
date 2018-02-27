@@ -7,7 +7,7 @@ namespace api.Models
 {
     public class TransferInputModel
     {
-        public double transfer_amount { get; set; }
+        public string transfer_amount { get; set; }
         public string destination_bank { get; set; }
         public string destination_account_id { get; set; }
         public string origin_account_id { get; set; }
@@ -22,9 +22,9 @@ namespace api.Models
 
     public class TransferOutputDataModel
     {
-        public double transfer_amount { get; set; }
-        public double fee_amount { get; set; }
-        public double origin_account_balance { get; set; }
+        public string transfer_amount { get; set; }
+        public string fee_amount { get; set; }
+        public string origin_account_balance { get; set; }
         public string origin_account_id { get; set; }
     }
 
