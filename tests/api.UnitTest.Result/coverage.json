@@ -1,0 +1,279 @@
+{
+  "SourcePath": "/Users/ifew/www_customer/easybuy/dojo/MoneyTransfer/",
+  "HitsFile": "/Users/ifew/www_customer/easybuy/dojo/MoneyTransfer/tests/api.UnitTest.Result/coverage-hits.txt",
+  "ExtraAssemblies": [
+    "/Users/ifew/www_customer/easybuy/dojo/MoneyTransfer/tests/api.UnitTest/bin/Debug/netcoreapp2.0/dotnet-minicover.dll"
+  ],
+  "Assemblies": [
+    {
+      "Name": "api",
+      "SourceFiles": {
+        "src/api/Services/TransferService.cs": {
+          "Instructions": [
+            {
+              "Id": 1,
+              "StartLine": 10,
+              "EndLine": 10,
+              "StartColumn": 13,
+              "EndColumn": 73,
+              "Class": "api.Services.TransferService",
+              "Method": "IsAccumulated",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsAccumulated(System.Double)",
+              "Instruction": "IL_0001: ldarg accumulatedNumber"
+            },
+            {
+              "Id": 2,
+              "StartLine": 11,
+              "EndLine": 11,
+              "StartColumn": 17,
+              "EndColumn": 29,
+              "Class": "api.Services.TransferService",
+              "Method": "IsAccumulated",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsAccumulated(System.Double)",
+              "Instruction": "IL_0021: ldc.i4 1"
+            },
+            {
+              "Id": 3,
+              "StartLine": 14,
+              "EndLine": 14,
+              "StartColumn": 13,
+              "EndColumn": 26,
+              "Class": "api.Services.TransferService",
+              "Method": "IsAccumulated",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsAccumulated(System.Double)",
+              "Instruction": "IL_0025: ldc.i4 0"
+            },
+            {
+              "Id": 4,
+              "StartLine": 19,
+              "EndLine": 19,
+              "StartColumn": 13,
+              "EndColumn": 67,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTransferAmount",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTransferAmount(System.Double)",
+              "Instruction": "IL_0001: ldarg transferAmount"
+            },
+            {
+              "Id": 5,
+              "StartLine": 20,
+              "EndLine": 20,
+              "StartColumn": 17,
+              "EndColumn": 29,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTransferAmount",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTransferAmount(System.Double)",
+              "Instruction": "IL_0024: ldc.i4 1"
+            },
+            {
+              "Id": 6,
+              "StartLine": 23,
+              "EndLine": 23,
+              "StartColumn": 13,
+              "EndColumn": 26,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTransferAmount",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTransferAmount(System.Double)",
+              "Instruction": "IL_0028: ldc.i4 0"
+            },
+            {
+              "Id": 7,
+              "StartLine": 28,
+              "EndLine": 28,
+              "StartColumn": 13,
+              "EndColumn": 32,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTransferFee",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTransferFee(System.Double)",
+              "Instruction": "IL_0001: ldarg transferFee"
+            },
+            {
+              "Id": 8,
+              "StartLine": 29,
+              "EndLine": 29,
+              "StartColumn": 17,
+              "EndColumn": 29,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTransferFee",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTransferFee(System.Double)",
+              "Instruction": "IL_0012: ldc.i4 1"
+            },
+            {
+              "Id": 9,
+              "StartLine": 32,
+              "EndLine": 32,
+              "StartColumn": 13,
+              "EndColumn": 26,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTransferFee",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTransferFee(System.Double)",
+              "Instruction": "IL_0016: ldc.i4 0"
+            },
+            {
+              "Id": 10,
+              "StartLine": 37,
+              "EndLine": 37,
+              "StartColumn": 13,
+              "EndColumn": 77,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTotalTransferNotOverAccumulated",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTotalTransferNotOverAccumulated(System.Double,System.Double)",
+              "Instruction": "IL_0001: ldarg transferAmountAndFee"
+            },
+            {
+              "Id": 11,
+              "StartLine": 38,
+              "EndLine": 38,
+              "StartColumn": 13,
+              "EndColumn": 65,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTotalTransferNotOverAccumulated",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTotalTransferNotOverAccumulated(System.Double,System.Double)",
+              "Instruction": "IL_0005: ldloc V_0"
+            },
+            {
+              "Id": 12,
+              "StartLine": 39,
+              "EndLine": 39,
+              "StartColumn": 17,
+              "EndColumn": 29,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTotalTransferNotOverAccumulated",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTotalTransferNotOverAccumulated(System.Double,System.Double)",
+              "Instruction": "IL_0028: ldc.i4 1"
+            },
+            {
+              "Id": 13,
+              "StartLine": 42,
+              "EndLine": 42,
+              "StartColumn": 13,
+              "EndColumn": 26,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTotalTransferNotOverAccumulated",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTotalTransferNotOverAccumulated(System.Double,System.Double)",
+              "Instruction": "IL_002c: ldc.i4 0"
+            },
+            {
+              "Id": 14,
+              "StartLine": 47,
+              "EndLine": 47,
+              "StartColumn": 13,
+              "EndColumn": 46,
+              "Class": "api.Services.TransferService",
+              "Method": "IsSameArea",
+              "MethodFullName": "System.Double api.Services.TransferService::IsSameArea(System.String,System.String)",
+              "Instruction": "IL_0001: ldarg originArea"
+            },
+            {
+              "Id": 15,
+              "StartLine": 48,
+              "EndLine": 48,
+              "StartColumn": 17,
+              "EndColumn": 29,
+              "Class": "api.Services.TransferService",
+              "Method": "IsSameArea",
+              "MethodFullName": "System.Double api.Services.TransferService::IsSameArea(System.String,System.String)",
+              "Instruction": "IL_000d: ldc.r8 0"
+            },
+            {
+              "Id": 16,
+              "StartLine": 51,
+              "EndLine": 51,
+              "StartColumn": 13,
+              "EndColumn": 26,
+              "Class": "api.Services.TransferService",
+              "Method": "IsSameArea",
+              "MethodFullName": "System.Double api.Services.TransferService::IsSameArea(System.String,System.String)",
+              "Instruction": "IL_0019: ldc.r8 10"
+            },
+            {
+              "Id": 17,
+              "StartLine": 56,
+              "EndLine": 56,
+              "StartColumn": 13,
+              "EndColumn": 46,
+              "Class": "api.Services.TransferService",
+              "Method": "IsSameBank",
+              "MethodFullName": "System.Double api.Services.TransferService::IsSameBank(System.String,System.String)",
+              "Instruction": "IL_0001: ldarg originBank"
+            },
+            {
+              "Id": 18,
+              "StartLine": 57,
+              "EndLine": 57,
+              "StartColumn": 17,
+              "EndColumn": 29,
+              "Class": "api.Services.TransferService",
+              "Method": "IsSameBank",
+              "MethodFullName": "System.Double api.Services.TransferService::IsSameBank(System.String,System.String)",
+              "Instruction": "IL_000d: ldc.r8 0"
+            },
+            {
+              "Id": 19,
+              "StartLine": 60,
+              "EndLine": 60,
+              "StartColumn": 13,
+              "EndColumn": 26,
+              "Class": "api.Services.TransferService",
+              "Method": "IsSameBank",
+              "MethodFullName": "System.Double api.Services.TransferService::IsSameBank(System.String,System.String)",
+              "Instruction": "IL_0019: ldc.r8 35"
+            },
+            {
+              "Id": 20,
+              "StartLine": 65,
+              "EndLine": 65,
+              "StartColumn": 13,
+              "EndColumn": 75,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTotalTransferNotOverAccountBalance",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTotalTransferNotOverAccountBalance(System.Double,System.Double)",
+              "Instruction": "IL_0001: ldarg accountBalance"
+            },
+            {
+              "Id": 21,
+              "StartLine": 66,
+              "EndLine": 66,
+              "StartColumn": 13,
+              "EndColumn": 36,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTotalTransferNotOverAccountBalance",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTotalTransferNotOverAccountBalance(System.Double,System.Double)",
+              "Instruction": "IL_0005: ldloc V_0"
+            },
+            {
+              "Id": 22,
+              "StartLine": 67,
+              "EndLine": 67,
+              "StartColumn": 17,
+              "EndColumn": 29,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTotalTransferNotOverAccountBalance",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTotalTransferNotOverAccountBalance(System.Double,System.Double)",
+              "Instruction": "IL_0019: ldc.i4 1"
+            },
+            {
+              "Id": 23,
+              "StartLine": 70,
+              "EndLine": 70,
+              "StartColumn": 13,
+              "EndColumn": 26,
+              "Class": "api.Services.TransferService",
+              "Method": "IsTotalTransferNotOverAccountBalance",
+              "MethodFullName": "System.Boolean api.Services.TransferService::IsTotalTransferNotOverAccountBalance(System.Double,System.Double)",
+              "Instruction": "IL_001d: ldc.i4 0"
+            }
+          ]
+        }
+      },
+      "Locations": [
+        {
+          "File": "/Users/ifew/www_customer/easybuy/dojo/MoneyTransfer/tests/api.UnitTest/bin/Debug/netcoreapp2.0/api.dll",
+          "BackupFile": "/Users/ifew/www_customer/easybuy/dojo/MoneyTransfer/tests/api.UnitTest/bin/Debug/netcoreapp2.0/api.uninstrumented.dll",
+          "PdbFile": "/Users/ifew/www_customer/easybuy/dojo/MoneyTransfer/tests/api.UnitTest/bin/Debug/netcoreapp2.0/api.pdb",
+          "BackupPdbFile": "/Users/ifew/www_customer/easybuy/dojo/MoneyTransfer/tests/api.UnitTest/bin/Debug/netcoreapp2.0/api.uninstrumented.pdb"
+        }
+      ]
+    }
+  ]
+}
