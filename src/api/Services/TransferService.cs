@@ -73,16 +73,33 @@ namespace api.Services
 
         public TransferOutputModel TransferMoney(TransferInputModel transferDataInput)
         {
+            bool _valid = false;
+            var _code = "400";
+            var _message = "error";
+
+            if(IsTransferAmount(Double.Parse(transferDataInput.transfer_amount))) {
+                _valid = true;
+            }
+
+            if(IsTransferAmount(Double.Parse(transferDataInput.transfer_amount))) {
+                _valid = true;
+            }
+
+            if(_valid) {
+                _code = "200";
+                _message = "success";
+            }
+
             HeaderModel header = new HeaderModel {
-                code = "200",
-                message = "success"
+                code = _code,
+                message = _message
             };
 
             TransferOutputDataModel body = new TransferOutputDataModel {
-                origin_account_balance = 5000.00,
+                origin_account_balance = "5000.00",
                 origin_account_id = transferDataInput.origin_account_id,
-                fee_amount = 35.00,
-                transfer_amount = transferDataInput.transfer_amount
+                fee_amount = "35.00",
+                transfer_amount = transferDataInput.transfer_amount.ToString()
             };
 
             TransferOutputModel transferOutputModel = new TransferOutputModel {
