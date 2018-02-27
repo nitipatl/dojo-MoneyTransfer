@@ -57,10 +57,10 @@ namespace api.UnitTest
         [Theory]
         [InlineData("BKK001", "BKK001", 0)]
         [InlineData("BKK001", "NSW001", 10)]
-        public void When_Transfer_Is_Same_Bank(string originBank, string destinationBank, double expectedResult)
+        public void When_Transfer_Is_Same_Area(string originArea, string destinationArea, double expectedResult)
         {
             TransferService transferService = new TransferService();
-            double actualResult = transferService.IsSameBank(originBank, destinationBank);
+            double actualResult = transferService.IsSameArea(originArea, destinationArea);
 
             Assert.Equal(expectedResult, actualResult);
         }

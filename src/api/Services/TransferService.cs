@@ -42,9 +42,9 @@ namespace api.Services
             return false;
         }
 
-        public double IsSameBank(string originBank, string destinationBank)
+        public double IsSameArea(string originArea, string destinationArea)
         {
-            if(originBank == destinationBank) {
+            if(originArea == destinationArea) {
                 return 0.00;
             }
 
