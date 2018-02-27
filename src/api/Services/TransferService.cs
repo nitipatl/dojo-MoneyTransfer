@@ -13,5 +13,14 @@ namespace api.Services
 
             return false;
         }
+
+        public bool IsTransferAmount(double transferAmount)
+        {
+            if((transferAmount >= 1) && (transferAmount <= 20000)) {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
