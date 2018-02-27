@@ -7,7 +7,7 @@ namespace api.Services
     {
         public bool IsAccumulated(double accumulatedNumber)
         {
-            if(accumulatedNumber == 0) {
+            if((accumulatedNumber >= 0) && (accumulatedNumber < 100000)) {
                 return true;
             }
 
