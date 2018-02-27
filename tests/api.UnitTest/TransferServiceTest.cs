@@ -18,7 +18,6 @@ namespace api.UnitTest
             Assert.Equal(expectedResult, actualResult);
         }
 
-        
         [Theory]
         [InlineData(0.00, false)]
         [InlineData(500.00, true)]
@@ -28,6 +27,17 @@ namespace api.UnitTest
         {
             TransferService transferService = new TransferService();
             bool actualResult = transferService.IsTransferAmount(transferAmount);
+
+            Assert.Equal(expectedResult, actualResult);
+        }
+
+        [Theory]
+        [InlineData(35.00, true)]
+        [InlineData(0.00, false)]
+        public void When_TransferFee_Is_Not_0(double transferFeeAmount, bool expectedResult)
+        {
+            TransferService transferService = new TransferService();
+            bool actualResult = transferService.IsTransferFee(transferFeeAmount);
 
             Assert.Equal(expectedResult, actualResult);
         }
