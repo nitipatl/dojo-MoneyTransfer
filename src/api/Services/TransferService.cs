@@ -81,10 +81,6 @@ namespace api.Services
                 _valid = true;
             }
 
-            if(IsTransferAmount(Double.Parse(transferDataInput.transfer_amount))) {
-                _valid = true;
-            }
-
             if(_valid) {
                 _code = "200";
                 _message = "success";
