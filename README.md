@@ -28,6 +28,10 @@ API โอนเงินจากบัญชีต้นทาง ไปบั
 
 ![Flowchart](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_flow_chart.JPG)
 
+### Design Test Cases
+
+![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_design_test_cases.JPG)
+
 ### Design Test Cases per bisuness condition
 
 ![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_unit_check_accumulated_day.JPG)
