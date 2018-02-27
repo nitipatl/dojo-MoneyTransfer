@@ -50,5 +50,14 @@ namespace api.Services
 
             return 10.00;
         }
+
+        public double IsSameBank(string originBank, string destinationBank)
+        {
+            if(originBank == destinationBank) {
+                return 0.00;
+            }
+
+            return 35.00;
+        }
     }
 }
