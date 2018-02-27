@@ -24,3 +24,22 @@ API โอนเงินจากบัญชีต้นทาง ไปบั
 11. บันทึกหักค่าธรรมเนียมจากบัญชีต้นทาง (ถ้ามีค่าธรรมเนียม)
 12. คืนค่า: สถานะ สำเร็จหรือไม่สำเร็จ, จำนวนเงินคงเหลือของบัญชีต้นทาง, เลขบัญชีต้นทาง, จำนวนเงินโอน, ค่าธรรมเนียม
 
+### Visualize process to Flowchart
+
+![Flowchart](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_flow_chart.JPG)
+
+### Design Test Cases per bisuness condition
+
+![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_unit_check_accumulated_day.JPG)
+
+![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_unit_check_transfer_amount.JPG)
+
+![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_unit_fee_existed.jpg)
+
+![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_unit_not_over_accumulated_day.JPG)
+
+![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_unit_same_area.JPG)
+
+![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_unit_same_bank.JPG)
+
+![Test Cases](https://github.com/ifew/dojo-MoneyTransfer/blob/master/readme/transfer_money_unit_transfer_amount_not_over_account_balance.jpg)
