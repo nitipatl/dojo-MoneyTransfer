@@ -64,5 +64,16 @@ namespace api.UnitTest
 
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Theory]
+        [InlineData("SCB", "SCB", 0)]
+        [InlineData("SCB", "KBANK", 35)]
+        public void When_Transfer_Is_Same_Bank(string originBank, string destinationBank, double expectedResult)
+        {
+            TransferService transferService = new TransferService();
+            double actualResult = transferService.IsSameBank(originBank, destinationBank);
+
+            Assert.Equal(expectedResult, actualResult);
+        }
     }
 }
