@@ -43,10 +43,10 @@ namespace api.UnitTest
         }
         
         [Theory]
-        [InlineData(535.00, 99465.00, true)]
-        [InlineData(510.00, 10.00, true)]
-        [InlineData(535.00, 99995.00, false)]
-        public void When_TransferAmount_And_TransferFee_Is_Not_Over_Accumulated_In_Day(double transferAmountAndFee, double accumulatedNumber, bool expectedResult)
+        [InlineData(535.00, 99465.00, false)]
+        [InlineData(510.00, 10.00, false)]
+        [InlineData(535.00, 99995.00, true)]
+        public void When_TransferAmount_And_TransferFee_Is_Over_Accumulated_In_Day(double transferAmountAndFee, double accumulatedNumber, bool expectedResult)
         {
             TransferCondition transferCondition = new TransferCondition();
             bool actualResult = transferCondition.IsTotalTransferOverAccumulated(transferAmountAndFee, accumulatedNumber);
@@ -77,10 +77,10 @@ namespace api.UnitTest
         }
 
         [Theory]
-        [InlineData(535.00, 5000.00, true)]
-        [InlineData(5000.00, 5000.00, true)]
-        [InlineData(5535.00, 5000.00, false)]
-        public void When_TransferAmount_And_TransferFee_Is_Not_Over_Account_Balance(double transferAmountAndFee, double accountBalance, bool expectedResult)
+        [InlineData(535.00, 5000.00, false)]
+        [InlineData(5000.00, 5000.00, false)]
+        [InlineData(5535.00, 5000.00, true)]
+        public void When_TransferAmount_And_TransferFee_Is_Over_Account_Balance(double transferAmountAndFee, double accountBalance, bool expectedResult)
         {
             TransferCondition transferCondition = new TransferCondition();
             bool actualResult = transferCondition.IsTotalTransferOverAccountBalance(transferAmountAndFee, accountBalance);
