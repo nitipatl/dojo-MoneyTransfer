@@ -49,7 +49,7 @@ namespace api.UnitTest
         public void When_TransferAmount_And_TransferFee_Is_Not_Over_Accumulated_In_Day(double transferAmountAndFee, double accumulatedNumber, bool expectedResult)
         {
             TransferCondition transferCondition = new TransferCondition();
-            bool actualResult = transferCondition.IsTotalTransferNotOverAccumulated(transferAmountAndFee, accumulatedNumber);
+            bool actualResult = transferCondition.IsTotalTransferOverAccumulated(transferAmountAndFee, accumulatedNumber);
 
             Assert.Equal(expectedResult, actualResult);
         }
@@ -83,7 +83,7 @@ namespace api.UnitTest
         public void When_TransferAmount_And_TransferFee_Is_Not_Over_Account_Balance(double transferAmountAndFee, double accountBalance, bool expectedResult)
         {
             TransferCondition transferCondition = new TransferCondition();
-            bool actualResult = transferCondition.IsTotalTransferNotOverAccountBalance(transferAmountAndFee, accountBalance);
+            bool actualResult = transferCondition.IsTotalTransferOverAccountBalance(transferAmountAndFee, accountBalance);
 
             Assert.Equal(expectedResult, actualResult);
         }

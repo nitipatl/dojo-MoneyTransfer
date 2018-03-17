@@ -33,14 +33,14 @@ namespace api.Services
             return false;
         }
 
-        public bool IsTotalTransferNotOverAccumulated(double transferAmountAndFee, double accumulatedNumber)
+        public bool IsTotalTransferOverAccumulated(double transferAmountAndFee, double accumulatedNumber)
         {
             double transferTotal = transferAmountAndFee + accumulatedNumber;
             if((transferTotal > 0) && (transferTotal <= 100000)) {
-                return true;
+                return false;
             }
 
-            return false;
+            return true;
         }
 
         public double IsSameArea(string originArea, string destinationArea)
@@ -61,14 +61,14 @@ namespace api.Services
             return 35.00;
         }
 
-        public bool IsTotalTransferNotOverAccountBalance(double transferAmountAndFee, double accountBalance)
+        public bool IsTotalTransferOverAccountBalance(double transferAmountAndFee, double accountBalance)
         {
             double avaliableTotal = accountBalance - transferAmountAndFee;
             if(avaliableTotal >= 0) {
-                return true;
+                return false;
             }
 
-            return false;
+            return true;
         }
     }
 }
