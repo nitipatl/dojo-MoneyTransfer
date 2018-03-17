@@ -46,9 +46,9 @@ namespace api.Services
             }
 
             TransferOutputDataModel body = new TransferOutputDataModel {
-                origin_account_balance = "5000.00",
+                origin_account_balance = transferDataInput.origin_account_balance.ToString(),
                 origin_account_id = transferDataInput.origin_account_id,
-                fee_amount = "35.00",
+                fee_amount = fee.ToString(),
                 transfer_amount = transferDataInput.transfer_amount.ToString()
             };
 
