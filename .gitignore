@@ -1,3 +1,5 @@
 .vscode
 bin
 obj
+tests/api.UnitTest.Result/coverage.json
+tests/api.UnitTest.Result/coverage-hits.txt
