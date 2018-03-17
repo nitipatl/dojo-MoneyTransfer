@@ -6,26 +6,44 @@ namespace api.Services
 {
     public class TransferService
     {
-        private TransferCondition transferCondition;
         public TransferOutputModel TransferMoney(TransferInputModel transferDataInput)
         {
-            bool _valid = false;
-            var _code = "400";
-            var _message = "error";
 
-            if(transferCondition.IsTransferAmount(Double.Parse(transferDataInput.transfer_amount))) {
-                _valid = true;
+            TransferCondition transferCondition = new TransferCondition();
+            if(transferCondition.IsAccumulated(transferDataInput.origin_account_daily_accumulated_transfer) == false) {
+                return _JsonOutput(new HeaderModel {
+                    code = "400-01",
+                    message = "Your accumulated transfer over 100,000THB per day"
+                }, new TransferOutputDataModel());
             }
 
-            if(_valid) {
-                _code = "200";
-                _message = "success";
+            if(transferCondition.IsTransferAmount(transferDataInput.transfer_amount) == false) {
+                return _JsonOutput(new HeaderModel {
+                    code = "400-02",
+                    message = "Your transfer amount can't over 20,000THB"
+                }, new TransferOutputDataModel());
             }
 
-            HeaderModel header = new HeaderModel {
-                code = _code,
-                message = _message
-            };
+            double fee = transferCondition.IsSameBank(transferDataInput.origin_bank, transferDataInput.destination_bank);
+            if(fee == 0) {
+                fee = transferCondition.IsSameArea(transferDataInput.origin_bank_area, transferDataInput.destination_bank_area);
+            }
+
+            double transferAmountWithFee = transferDataInput.transfer_amount + fee;
+
+            if(transferCondition.IsTotalTransferOverAccumulated(transferAmountWithFee, transferDataInput.origin_account_daily_accumulated_transfer)) {
+                return _JsonOutput(new HeaderModel {
+                    code = "400-03",
+                    message = "Your transfer amount with fee over accumulated 100,000THB per day"
+                }, new TransferOutputDataModel());
+            }
+
+            if(transferCondition.IsTotalTransferOverAccountBalance(transferAmountWithFee, transferDataInput.origin_account_balance)) {
+                return _JsonOutput(new HeaderModel {
+                    code = "400-04",
+                    message = "Your balance not enought for transfer with deduct fee"
+                }, new TransferOutputDataModel());
+            }
 
             TransferOutputDataModel body = new TransferOutputDataModel {
                 origin_account_balance = "5000.00",
@@ -34,12 +52,28 @@ namespace api.Services
                 transfer_amount = transferDataInput.transfer_amount.ToString()
             };
 
-            TransferOutputModel transferOutputModel = new TransferOutputModel {
-                header = header,
-                body = body
+            return _JsonOutput(new HeaderModel {
+                    code = "200",
+                    message = "Transfer completed"
+                }, body);
+        }
+
+        private TransferOutputModel _JsonOutput(HeaderModel header, TransferOutputDataModel data) {
+
+            header = new HeaderModel {
+                code = header.code,
+                message = header.message
             };
 
+            TransferOutputDataModel body = new TransferOutputDataModel();
+
+            TransferOutputModel transferOutputModel = new TransferOutputModel {
+                header = header,
+                body = data
+            };
+            
             return transferOutputModel;
         }
+    
     }
 }
