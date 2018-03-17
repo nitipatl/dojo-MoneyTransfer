@@ -7,10 +7,15 @@ namespace api.Models
 {
     public class TransferInputModel
     {
-        public string transfer_amount { get; set; }
+        public double transfer_amount { get; set; }
         public string destination_bank { get; set; }
+        public string destination_bank_area { get; set; }
         public string destination_account_id { get; set; }
         public string origin_account_id { get; set; }
+        public string origin_bank { get; set; }
+        public string origin_bank_area { get; set; }
+        public double origin_account_balance { get; set; }
+        public double origin_account_daily_accumulated_transfer { get; set; }
 
     }
 
