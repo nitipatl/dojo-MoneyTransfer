@@ -7,7 +7,8 @@ export "MiniCover=dotnet minicover"
 dotnet restore
 dotnet build
 cd tests/api.UnitTest
-$MiniCover instrument --workdir ../../ --sources "src/api/Services/*.cs" --sources "src/api/Models/*.cs" --assemblies "tests/api.UnitTest/bin/**/*.dll" --exclude-sources "**/Services/HttpClient/*" --exclude-sources "**/Models/Context/*" --coverage-file "tests/api.UnitTest.Result/coverage.json" --hits-file "tests/api.UnitTest.Result/coverage-hits.txt"
+$MiniCover instrument --workdir ../../ --sources "src/api/Services/*.cs" --assemblies "tests/api.UnitTest/bin/**/*.dll" --exclude-sources "**/Services/HttpClient/*" --exclude-sources "**/Models/Context/*" --coverage-file "tests/api.UnitTest.Result/coverage.json" --hits-file "tests/api.UnitTest.Result/coverage-hits.txt"
+$MiniCover reset
 
 dotnet test --no-build
 
