@@ -19,6 +19,7 @@ namespace other_bank_fake.api
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                   .UseUrls("http://*:6001")
                 .UseStartup<Startup>()
                 .Build();
     }
