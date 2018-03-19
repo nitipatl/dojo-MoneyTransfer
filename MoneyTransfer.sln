@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{73370FCC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api.UnitTest", "tests\api.UnitTest\api.UnitTest.csproj", "{7E18DE8E-AF5D-4F2B-B558-D130A4FDF4B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "other_bank_fake.api", "src\other_bank_fake.api\other_bank_fake.api.csproj", "{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,9 +50,22 @@ Global
 		{7E18DE8E-AF5D-4F2B-B558-D130A4FDF4B7}.Release|x64.Build.0 = Release|x64
 		{7E18DE8E-AF5D-4F2B-B558-D130A4FDF4B7}.Release|x86.ActiveCfg = Release|x86
 		{7E18DE8E-AF5D-4F2B-B558-D130A4FDF4B7}.Release|x86.Build.0 = Release|x86
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Debug|x64.ActiveCfg = Debug|x64
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Debug|x64.Build.0 = Debug|x64
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Debug|x86.ActiveCfg = Debug|x86
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Debug|x86.Build.0 = Debug|x86
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Release|x64.ActiveCfg = Release|x64
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Release|x64.Build.0 = Release|x64
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Release|x86.ActiveCfg = Release|x86
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{057B1BE7-B21D-48D3-B687-ED2C4D72FF45} = {006B2827-1B84-44F6-8EA6-3E5ECD35F70F}
 		{7E18DE8E-AF5D-4F2B-B558-D130A4FDF4B7} = {73370FCC-285E-431F-A935-9A3DEFE13D25}
+		{8BA7C5AC-29AD-4796-B166-5CAAF41B3D00} = {006B2827-1B84-44F6-8EA6-3E5ECD35F70F}
 	EndGlobalSection
 EndGlobal
