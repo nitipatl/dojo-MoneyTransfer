@@ -1,8 +1,3 @@
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using Microsoft.EntityFrameworkCore;
-
 namespace api.Models
 {
     public class TransferInputModel
