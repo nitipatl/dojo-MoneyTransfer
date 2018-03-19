@@ -59,14 +59,6 @@ namespace api.Services
         }
 
         private TransferOutputModel _JsonOutput(HeaderModel header, TransferOutputDataModel data) {
-
-            header = new HeaderModel {
-                code = header.code,
-                message = header.message
-            };
-
-            TransferOutputDataModel body = new TransferOutputDataModel();
-
             TransferOutputModel transferOutputModel = new TransferOutputModel {
                 header = header,
                 body = data
