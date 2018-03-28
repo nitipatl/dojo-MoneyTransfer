@@ -29,7 +29,7 @@ namespace api.Controllers
         [HttpGet]
         public JsonResult Get()
         {
-           return Json("Hello");
+           return Json("Hello!");
         }
         
     }
