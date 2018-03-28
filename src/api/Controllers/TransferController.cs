@@ -25,6 +25,12 @@ namespace api.Controllers
 
             return Json(transferResult);
         }
+
+        [HttpGet]
+        public JsonResult Get()
+        {
+           return Json("Hello");
+        }
         
     }
 }
